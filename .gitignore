@@ -1,0 +1,35 @@
+# Ignore Maven build directories
+target/
+*.class
+
+# Ignore IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Ignore logs
+logs/
+*.log
+
+# Ignore reports
+reports/
+test-output/
+
+# Ignore screenshots
+screenshots/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore test data (if sensitive)
+testdata/*.xlsx
+testdata/*.json
+
+# Ignore Maven wrapper
+.mvn/
+mvnw
+mvnw.cmd

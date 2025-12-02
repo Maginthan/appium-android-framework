@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Appium Android Test Suite" verbose="1" parallel="false" thread-count="1">
+    
+    <listeners>
+        <!-- Add custom listeners here if needed -->
+    </listeners>
+    
+    <test name="Calculator Tests">
+        <classes>
+            <class name="com.appium.tests.CalculatorTests"/>
+        </classes>
+    </test>
+    
+    <!-- Add more test tags for additional test classes -->
+    <!--
+    <test name="Another Test">
+        <classes>
+            <class name="com.appium.tests.AnotherTest"/>
+        </classes>
+    </test>
+    -->
+    
+</suite>
