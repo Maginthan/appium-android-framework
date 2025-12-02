@@ -358,8 +358,10 @@ To extend this framework:
 
 ## 📄 License
 
-This framework is provided as-is for automation testing purposes.
+This framework is open source and available for educational and commercial use.
+
+## 👨‍💻 Author
+
+This is a sample project created by Maginthan
 
 ---
-
-**Happy Testing! 🚀**
