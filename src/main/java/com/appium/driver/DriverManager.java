@@ -32,7 +32,7 @@ public final class DriverManager {
      */
     public static void initializeDriver() {
         if (driver.get() != null) {
-            logger.warn("Driver already initialized for thread: {}", Thread.currentThread().getId());
+            logger.warn("Driver already initialized for thread: {}", Thread.currentThread().threadId());
             return;
         }
 
@@ -47,7 +47,7 @@ public final class DriverManager {
             }
 
             configureTimeouts();
-            logger.info("Driver initialized successfully for thread: {}", Thread.currentThread().getId());
+            logger.info("Driver initialized successfully for thread: {}", Thread.currentThread().threadId());
 
         } catch (Exception e) {
             logger.error("Failed to initialize driver: {}", e.getMessage(), e);
@@ -112,7 +112,7 @@ public final class DriverManager {
      */
     public static AppiumDriver getDriver() {
         if (driver.get() == null) {
-            logger.error("Driver not initialized for thread: {}", Thread.currentThread().getId());
+            logger.error("Driver not initialized for thread: {}", Thread.currentThread().threadId());
             throw new IllegalStateException("Driver not initialized. Call initializeDriver() first.");
         }
         return driver.get();
@@ -125,14 +125,14 @@ public final class DriverManager {
         if (driver.get() != null) {
             try {
                 driver.get().quit();
-                logger.info("Driver quit successfully for thread: {}", Thread.currentThread().getId());
+                logger.info("Driver quit successfully for thread: {}", Thread.currentThread().threadId());
             } catch (Exception e) {
                 logger.error("Error while quitting driver: {}", e.getMessage(), e);
             } finally {
                 driver.remove();
             }
         } else {
-            logger.warn("No driver to quit for thread: {}", Thread.currentThread().getId());
+            logger.warn("No driver to quit for thread: {}", Thread.currentThread().threadId());
         }
     }
 

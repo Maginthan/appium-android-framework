@@ -237,10 +237,9 @@ public abstract class BasePage {
      */
     protected void hideKeyboard() {
         try {
-            // Cast to AndroidDriver for keyboard methods
-            if (driver instanceof io.appium.java_client.android.AndroidDriver) {
-                io.appium.java_client.android.AndroidDriver androidDriver = (io.appium.java_client.android.AndroidDriver) driver;
-                androidDriver.hideKeyboard();
+            // Use HidesKeyboard interface for Appium 9.x
+            if (driver instanceof io.appium.java_client.HidesKeyboard) {
+                ((io.appium.java_client.HidesKeyboard) driver).hideKeyboard();
                 logger.info("Keyboard hidden");
             }
         } catch (Exception e) {

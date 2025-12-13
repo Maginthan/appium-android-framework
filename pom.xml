@@ -19,8 +19,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         
         <!-- Dependency Versions -->
-        <appium.version>8.6.0</appium.version>
-        <selenium.version>4.15.0</selenium.version>
+        <appium.version>9.3.0</appium.version>
+        <selenium.version>4.27.0</selenium.version>
         <testng.version>7.8.0</testng.version>
         <extentreports.version>5.1.1</extentreports.version>
         <log4j.version>2.20.0</log4j.version>
